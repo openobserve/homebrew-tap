@@ -15,21 +15,21 @@ data using APIs and searching using kibana (Kibana is not supported with
 zinc. Zinc provides its own UI).
 "
   homepage "https://github.com/zinclabs/zinc"
-  version "0.3.2"
+  version "0.3.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/zinclabs/zinc/releases/download/v0.3.2/zinc_0.3.2_Darwin_arm64.tar.gz"
-      sha256 "5ecc7857386b60ecc93e09c0ac41b280f27232a08f04eb889c3931b59fdbfdf8"
+      url "https://github.com/zinclabs/zinc/releases/download/v0.3.3/zinc_0.3.3_Darwin_arm64.tar.gz"
+      sha256 "3a54de571394a6ad8cef37c4e66cdd6c5f371d628abb7d38c3411a1923c4f9af"
 
       def install
         bin.install "zinc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/zinclabs/zinc/releases/download/v0.3.2/zinc_0.3.2_Darwin_x86_64.tar.gz"
-      sha256 "0b0423d550589a8b490cd90ae06eaf1e48ef4ad93689a56538ccfe7977705b06"
+      url "https://github.com/zinclabs/zinc/releases/download/v0.3.3/zinc_0.3.3_Darwin_x86_64.tar.gz"
+      sha256 "3528b9f9a3cac6c6f793312cc731323df27a1a7d9b9fd57e35eaef70344db495"
 
       def install
         bin.install "zinc"
@@ -38,25 +38,25 @@ zinc. Zinc provides its own UI).
   end
 
   on_linux do
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/zinclabs/zinc/releases/download/v0.3.3/zinc_0.3.3_Linux_armv6.tar.gz"
+      sha256 "a9ce1d4af8cd99bed3779f1e11565fffe9dfd8e851052f88cc0acd6623e2e4ed"
+
+      def install
+        bin.install "zinc"
+      end
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/zinclabs/zinc/releases/download/v0.3.2/zinc_0.3.2_Linux_x86_64.tar.gz"
-      sha256 "8505e9a316e2a47e1bbf6b8ef2587a7bc4612f6fc3d6c6c4e4a0c8e1a979fb1a"
+      url "https://github.com/zinclabs/zinc/releases/download/v0.3.3/zinc_0.3.3_Linux_x86_64.tar.gz"
+      sha256 "4de7514bd5df5aa4ad9a7a3af37cb2e72d12aea66f0d3fe7e416119e3bba547a"
 
       def install
         bin.install "zinc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zinclabs/zinc/releases/download/v0.3.2/zinc_0.3.2_Linux_arm64.tar.gz"
-      sha256 "e0fdd2b1b928014e3a80df2bd2f72919a6642da3606c1aa125166bdfc9cb49a0"
-
-      def install
-        bin.install "zinc"
-      end
-    end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/zinclabs/zinc/releases/download/v0.3.2/zinc_0.3.2_Linux_armv6.tar.gz"
-      sha256 "7e3e2e20af32f8e2321da6f4e177ca420b51d004a32c8be78b35ea1411f29b39"
+      url "https://github.com/zinclabs/zinc/releases/download/v0.3.3/zinc_0.3.3_Linux_arm64.tar.gz"
+      sha256 "9be18f586c1824c9b03b70dbb3f516fd3d07fedc0b46b2d65433a895c714913f"
 
       def install
         bin.install "zinc"
