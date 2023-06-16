@@ -15,21 +15,21 @@ data using APIs and searching using kibana (Kibana is not supported with
 ZincSearch. ZincSearch provides its own UI).
 "
   homepage "https://github.com/zincsearch/zincsearch"
-  version "0.4.6"
+  version "0.4.7"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/zincsearch/zincsearch/releases/download/v0.4.6/zincsearch_0.4.6_Darwin_x86_64.tar.gz"
-      sha256 "050d738fbac9ac7f0dc5ec978c862ee317f7f488ae524cdcceb673b696644daa"
+      url "https://github.com/zincsearch/zincsearch/releases/download/v0.4.7/zincsearch_0.4.7_Darwin_x86_64.tar.gz"
+      sha256 "35c4212c7f903a43b453331aac410d6143f9cf9b0016bb130cd7d1945d11af94"
 
       def install
         bin.install "zincsearch"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/zincsearch/zincsearch/releases/download/v0.4.6/zincsearch_0.4.6_Darwin_arm64.tar.gz"
-      sha256 "d8de3857f9210c2689840eb52baced6691e8ddd5ec4b1e1c283bbbe3bfe8ce34"
+      url "https://github.com/zincsearch/zincsearch/releases/download/v0.4.7/zincsearch_0.4.7_Darwin_arm64.tar.gz"
+      sha256 "379ecb341492a6b0c25d5d57a1bcb623ffbe7ecad0895deb495f98aa434ca26a"
 
       def install
         bin.install "zincsearch"
@@ -39,24 +39,24 @@ ZincSearch. ZincSearch provides its own UI).
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/zincsearch/zincsearch/releases/download/v0.4.6/zincsearch_0.4.6_Linux_armv6.tar.gz"
-      sha256 "64f05993a869591a16dbf6513c22478a1d97c6861b5c662cb00b8a0c44b6929f"
-
-      def install
-        bin.install "zincsearch"
-      end
-    end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zincsearch/zincsearch/releases/download/v0.4.6/zincsearch_0.4.6_Linux_arm64.tar.gz"
-      sha256 "f062b9f1c8744878afe66d01bd724410b765d10c5420a26ddcefe89839b9da4d"
+      url "https://github.com/zincsearch/zincsearch/releases/download/v0.4.7/zincsearch_0.4.7_Linux_armv6.tar.gz"
+      sha256 "34ca7e8fcbd82ae67e6a65febbc08ac277f3252eccb5d5f711be84ecbea6d755"
 
       def install
         bin.install "zincsearch"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/zincsearch/zincsearch/releases/download/v0.4.6/zincsearch_0.4.6_Linux_x86_64.tar.gz"
-      sha256 "5b3108e8a671bb0cd2791d2a361bb3c96bb6615bd78af325f9c0872769d92201"
+      url "https://github.com/zincsearch/zincsearch/releases/download/v0.4.7/zincsearch_0.4.7_Linux_x86_64.tar.gz"
+      sha256 "10642d3d0397a2cc335aff6c27950c222bfff3ec65b4850e822cc5083681766a"
+
+      def install
+        bin.install "zincsearch"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/zincsearch/zincsearch/releases/download/v0.4.7/zincsearch_0.4.7_Linux_arm64.tar.gz"
+      sha256 "62228f32c5550e841641c96545018ea30bf9e5b2f570daba6c3c9e122e43d7c2"
 
       def install
         bin.install "zincsearch"
