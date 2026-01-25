@@ -5,21 +5,21 @@
 class O2 < Formula
   desc "OpenObserve CLI - Manage OpenObserve resources from command line"
   homepage "https://github.com/openobserve/o2-cli"
-  version "1.1.4"
+  version "1.1.5"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/openobserve/o2-cli/releases/download/v1.1.4/o2-darwin-amd64.tar.gz"
-      sha256 "16701a26035452aa473da11d34f68d392e0639a5230eff9ae3e041e4760cf04d"
+      url "https://github.com/openobserve/o2-cli/releases/download/v1.1.5/o2-darwin-amd64.tar.gz"
+      sha256 "fd0a9c7d7338d13e339d7825ddbf585f3fcadbafd85f8e378479a618f54150d0"
 
       def install
         bin.install "o2"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/openobserve/o2-cli/releases/download/v1.1.4/o2-darwin-arm64.tar.gz"
-      sha256 "523ac77be290f71f8a46c75aeef1cba2c0688190c9f1fb93f8241298497a903c"
+      url "https://github.com/openobserve/o2-cli/releases/download/v1.1.5/o2-darwin-arm64.tar.gz"
+      sha256 "d4b6beff300a548eda4638aa1524c09192b72278fbb9320abf0ce7c379fd19c9"
 
       def install
         bin.install "o2"
@@ -29,15 +29,15 @@ class O2 < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/openobserve/o2-cli/releases/download/v1.1.4/o2-linux-amd64.tar.gz"
-      sha256 "20bc43ce3a9c7ad45d53059d6ec60c00f8884d37eac61713256daf098575cba9"
+      url "https://github.com/openobserve/o2-cli/releases/download/v1.1.5/o2-linux-amd64.tar.gz"
+      sha256 "3a1c66c61f7477359e940c4b2006d211e1880e64c0bcdbac2c3ceed8d1f380f8"
       def install
         bin.install "o2"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/openobserve/o2-cli/releases/download/v1.1.4/o2-linux-arm64.tar.gz"
-      sha256 "7544fa96673dfb8dc03e8c6f0bf14c4f5e6b5d0a82765053a5aeda5c8d576ff7"
+      url "https://github.com/openobserve/o2-cli/releases/download/v1.1.5/o2-linux-arm64.tar.gz"
+      sha256 "45053fb919f4deef325debed64c0723eb7bb398c9f5bba3ecca9aac8605ade53"
       def install
         bin.install "o2"
       end
