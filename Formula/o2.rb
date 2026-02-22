@@ -5,23 +5,23 @@
 class O2 < Formula
   desc "OpenObserve CLI - Manage OpenObserve resources from command line"
   homepage "https://github.com/openobserve/o2-cli"
-  version "1.1.5"
+  version "1.1.6"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/openobserve/o2-cli/releases/download/v1.1.5/o2-darwin-amd64.tar.gz"
-      sha256 "fd0a9c7d7338d13e339d7825ddbf585f3fcadbafd85f8e378479a618f54150d0"
+      url "https://github.com/openobserve/o2-cli/releases/download/v1.1.6/o2-darwin-amd64.tar.gz"
+      sha256 "41358e8bbbd2577ecddbfad41104e70482b5ea77afd330bbb983e343be652e22"
 
-      def install
+      define_method(:install) do
         bin.install "o2"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/openobserve/o2-cli/releases/download/v1.1.5/o2-darwin-arm64.tar.gz"
-      sha256 "d4b6beff300a548eda4638aa1524c09192b72278fbb9320abf0ce7c379fd19c9"
+      url "https://github.com/openobserve/o2-cli/releases/download/v1.1.6/o2-darwin-arm64.tar.gz"
+      sha256 "5e5d1954d228d8111fc4b4e170b2acb24f1b85a096fe21795ea9042121bde7f3"
 
-      def install
+      define_method(:install) do
         bin.install "o2"
       end
     end
@@ -29,16 +29,16 @@ class O2 < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/openobserve/o2-cli/releases/download/v1.1.5/o2-linux-amd64.tar.gz"
-      sha256 "3a1c66c61f7477359e940c4b2006d211e1880e64c0bcdbac2c3ceed8d1f380f8"
-      def install
+      url "https://github.com/openobserve/o2-cli/releases/download/v1.1.6/o2-linux-amd64.tar.gz"
+      sha256 "f1f90766c2e0532e0e9245dd9fabf9fb04ce823c9a3b5b8b6ad5d6f9c6070677"
+      define_method(:install) do
         bin.install "o2"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/openobserve/o2-cli/releases/download/v1.1.5/o2-linux-arm64.tar.gz"
-      sha256 "45053fb919f4deef325debed64c0723eb7bb398c9f5bba3ecca9aac8605ade53"
-      def install
+      url "https://github.com/openobserve/o2-cli/releases/download/v1.1.6/o2-linux-arm64.tar.gz"
+      sha256 "cb7f3c4b209dab1c8d269c377dd35141b3f90b593246811dad3aa121cd5560a0"
+      define_method(:install) do
         bin.install "o2"
       end
     end
