@@ -5,21 +5,21 @@
 class O2 < Formula
   desc "OpenObserve CLI - Manage OpenObserve resources from command line"
   homepage "https://github.com/openobserve/o2-cli"
-  version "1.2.1"
+  version "1.3.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/openobserve/o2-cli/releases/download/v1.2.1/o2-darwin-amd64.tar.gz"
-      sha256 "4b661c800dd362c0ea2dc443a080f912fa47e6a62c0729e29941cda403b34bc5"
+      url "https://github.com/openobserve/o2-cli/releases/download/v1.3.0/o2-darwin-amd64.tar.gz"
+      sha256 "6e182daa1928b37f55b2a22708862733086a95168727e37a141e01670c4968b8"
 
       define_method(:install) do
         bin.install "o2"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/openobserve/o2-cli/releases/download/v1.2.1/o2-darwin-arm64.tar.gz"
-      sha256 "a6cbb4ffc0193b8378775acf32f833529c0002de1055d7c9ac39b38781ef2938"
+      url "https://github.com/openobserve/o2-cli/releases/download/v1.3.0/o2-darwin-arm64.tar.gz"
+      sha256 "2b6128ad08f4b4b171ad15b918c726c08a5da3509da5723288603b662198cd81"
 
       define_method(:install) do
         bin.install "o2"
@@ -29,15 +29,15 @@ class O2 < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/openobserve/o2-cli/releases/download/v1.2.1/o2-linux-amd64.tar.gz"
-      sha256 "62db682f52ee56fb246c80199aebdaa914e8b1de1c630e09e20f8fcba85c06cb"
+      url "https://github.com/openobserve/o2-cli/releases/download/v1.3.0/o2-linux-amd64.tar.gz"
+      sha256 "6603d399eb5abd043dc27503e94b090f248975f5b9ed1b4cd4d0f07f584063a9"
       define_method(:install) do
         bin.install "o2"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/openobserve/o2-cli/releases/download/v1.2.1/o2-linux-arm64.tar.gz"
-      sha256 "87980eca0e0325fea5719d62165f7262551be68a68ac97dff9971824ea34fe99"
+      url "https://github.com/openobserve/o2-cli/releases/download/v1.3.0/o2-linux-arm64.tar.gz"
+      sha256 "428b30b17561cba88d85d273575ce879efb547d9e2714a67ea74c85cffa79498"
       define_method(:install) do
         bin.install "o2"
       end
